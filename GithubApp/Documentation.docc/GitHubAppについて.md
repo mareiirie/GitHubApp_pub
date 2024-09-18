@@ -1,8 +1,8 @@
-# GitHubApp
+# GitHubAppについて
 Swift6対応、SwiftUI、マルチモジュール、ViewModelを使わないアーキテクチャなど、トレンドを重視したアプリです。
 
 @Metadata {
-    @CallToAction(url: "https://github.com/mareiirie/GithubApp", purpose: link)
+    @CallToAction(url: "https://github.com/mareiirie/GitHubApp_pub", purpose: link)
 }
 
 ## 動作確認時の注意
@@ -40,10 +40,10 @@ Featureやデータレイヤーなどをモジュール化することで、以�
 - 疎結合を強制
   - 依存関係をなるべく綺麗に保つために、クリーンアーキテクチャを意識するように矯正される
 
-# Swift6対応について
+## Swift6対応について
  Swift6で標準となるStrict Concurrency Checkingへの対応済みのため、チェックレベルを最大にしてもワーニングは0件。 今回実装したクラスはほとんどがViewとバインドするクラスであるため、メインアクター隔離を行うことでSendableにした。
 
- # 今回注力していないもの
+ ## 今回注力していないもの
  - レイアウト
    - 細かくやろうと思えばいくらでもできてしまう
  - 全てのテストケースは書いていない
