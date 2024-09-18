@@ -1,0 +1,15 @@
+@Tutorial() {
+    @Intro(title: "プロフィール") {
+        このページでは、このアプリのプロフィール機能についてを説明します。
+    }
+    
+    @Section(title: "プロフィール画面") {
+        
+        @ContentAndMedia() {
+            この画面では、ログイン時に入力＆保存した名前をもとにGitHubAPIの[Get a user](https://docs.github.com/ja/rest/users/users?apiVersion=2022-11-28#get-a-user)の結果を表示しています。
+            @Video(source: "Profile")
+        }
+    }
+    
+}
+

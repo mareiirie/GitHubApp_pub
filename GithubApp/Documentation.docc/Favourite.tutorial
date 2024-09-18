@@ -1,0 +1,30 @@
+@Tutorial() {
+    @Intro(title: "お気に入り") {
+        このページでは、このアプリのお気に入り機能についてを説明します。
+    }
+    
+    @Section(title: "お気に入り") {
+        @ContentAndMedia {
+            ユーザー一覧画面からハートマックをタップすることでお気に入り追加できます。
+            
+            この機能は、EnvironmentObjectを使用した共有可能なStoreの利便性を明らかにするために実装した機能なので、お気に入りリストの永続化や、APIのコールは行っていません。
+
+            @Video(source: "Favourite")
+        }
+    }
+    
+    @Section(title: "お気に入り状態の共有") {
+        @ContentAndMedia {
+            `UsersStore`は共有されているので、どの画面でも最新の状態を反映できます。
+            
+            キャプチャをご覧ください。
+            
+            親Viewから表示されたハーフモーダル上でお気に入り削除を行うと、親Viewのお気に入りリストに同期的に反映していることがわかります。
+            
+            これは`UsersStore`が`ObservableObject`でできており、`EnvironmentObject`として複数の画面から監視されているためです。
+
+            @Video(source: "DeleteFavourite")
+        }
+    }
+
+}

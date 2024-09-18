@@ -1,0 +1,41 @@
+@Tutorial() {
+    @Intro(title: "ユーザー") {
+        このページでは、このアプリのユーザー表示機能についてを説明します。
+    }
+    
+    @Section(title: "ユーザー一覧") {
+        @ContentAndMedia {
+            GitHubAPIの[List users](https://docs.github.com/ja/rest/users/users?apiVersion=2022-11-28#list-users)の結果を一覧表示しています。
+            
+            要件通り、`fork`であるリポジトリは除外しています。
+            
+            ソートやページネーションは今回は割愛しています。
+            
+            リストの名前をタップするとユーザー詳細へ遷移し、リストのハートマークをタップするとお気に入りができます。
+            @Video(source: "UsersList")
+        }
+    }
+    
+    @Section(title: "ユーザー詳細") {
+        @ContentAndMedia {
+            ユーザー一覧画面から`name`をもらい、それをクエリに
+            GitHubAPIの[Get a user](https://docs.github.com/ja/rest/users/users?apiVersion=2022-11-28#get-a-user)をコールします。
+            
+            この結果を一覧画面のセクションとして上部に表示しています。
+            
+            また、同じく`name`をもとに[List repositories for a user](https://docs.github.com/ja/rest/repos/repos?apiVersion=2022-11-28#list-repositories-for-a-user)を呼び出し、リポジトリ一覧を表示しています。
+            
+            これら2つのAPIは、レンダリングのタイミングを揃えるために`asyn let`で結果の待ち合わせ処理をしています。
+            
+            ユーザー一覧で名前をタップするとユーザー詳細に遷移します。
+            @Video(source: "UserDetail")
+        }
+    }
+    @Section(title: "リポジトリのWebView") {
+        @ContentAndMedia {
+            ユーザー詳細画面でのレスポンスに含まれているリポジトリのhtml URLをWebViewで表示します。
+
+            @Video(source: "Repository")
+        }
+    }
+}

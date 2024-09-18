@@ -1,0 +1,22 @@
+@Tutorials(name: "タイトル") {
+    @Intro(title: "アプリの機能について") {
+        このアプリの機能を動画付きで説明します。        
+    }
+    
+    @Chapter(name: "ログイン") {
+        @TutorialReference(tutorial: "Login")
+    }
+    
+    @Chapter(name: "ユーザー") {
+        @TutorialReference(tutorial: "User")
+    }
+
+    @Chapter(name: "お気に入り") {
+        @TutorialReference(tutorial: "Favourite")
+    }
+    
+    @Chapter(name: "プロフィール") {
+        @TutorialReference(tutorial: "Profile")
+    }
+
+}
